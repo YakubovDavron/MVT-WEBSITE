@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style=""
+             data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <h1 class="mb-3 bread">Bizning Kontaktimiz </h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i
+                            class="ion-ios-arrow-forward"></i></a></span> <span>About <i
+                            class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section contact-section">
+        <div class="container">
+            <div class="row d-flex mb-5 contact-info">
+                <div class="col-md-12 mb-4">
+                    <h2 class="h3">Kontakt malumotlari</h2>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-3">
+                    <p><span>Manzil:</span>Toshkent, Mirzo Ulug'bek Ko'chasi 777A</p>
+                </div>
+                <div class="col-md-3">
+                    <p><span>Telefon raqam 📲📞:</span> <a href="tel://+998971010608">+ 998 97 101 06 08</a></p>
+                </div>
+                <div class="col-md-3">
+                    <p><span>Email:</span> <a
+                            href="https://github.com/Back-End-Dasturchilar/"><span
+                            class="__cf_email__"
+                            data-cfemail="yakubovdavron090@gmail.com">yakubovdavron090@gmail.com</span></a>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p><span>Website</span> <a href="#">UZ Devolopers.uz</a></p>
+                </div>
+            </div>
+            <div class="row block-9 no-gutters">
+                <div class="col-lg-6 order-md-last d-flex">
+                    <form method="post" class="bg-light p-4 p-md-5 contact-form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {#                            <input type="text" class="form-control" placeholder="Your Name">#}
+                            {{ form.name }}
+                        </div>
+                        <div class="form-group">
+                            {#                            <input type="text" class="form-control" placeholder="Your Email">#}
+                            {{ form.email }}
+                        </div>
+                        <div class="form-group">
+                            {#                            <input type="text" class="form-control" placeholder="Subject">#}
+                            {{ form.subject }}
+                        </div>
+                        <div class="form-group">
+                            {#                            <textarea name id cols="30" rows="7" class="form-control" placeholder="Message"></textarea>#}
+                            {{ form.message }}
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 d-flex">
+                    <div id="map" class="bg-white">Salom</div>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
